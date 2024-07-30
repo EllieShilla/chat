@@ -1,0 +1,52 @@
+<div class="bodystyle">
+  <section class="msger">
+    <header class="msger-header">
+      <div class="msger-header-title">
+        <i class="fas fa-comment-alt"></i> Chat
+      </div>
+      <div class="msger-header-options">
+        <span><i class="fas fa-cog"></i></span>
+      </div>
+    </header>
+
+    <main class="msger-chat">
+      <form
+        class="msger-inputarea"
+        id="messageForm"
+        #loginForm="ngForm"
+        (ngSubmit)="onSubmit()"
+      >
+        <div>
+          <input
+            name="email"
+            [(ngModel)]="model.Email"
+            type="text"
+            class="msger-input"
+            placeholder="Enter your email..."
+          />
+        </div>
+        <div>
+          <input
+            name="userName"
+            [(ngModel)]="model.UserName"
+            type="text"
+            class="msger-input"
+            placeholder="Enter your name..."
+          />
+        </div>
+        <div>
+          <button
+            type="submit"
+            class="msger-send-btn"
+            (click)="onRegistrationClick()"
+          >
+            Sign up
+          </button>
+          <button type="submit" class="msger-send-btn" (click)="onLoginClick()">
+            Sign in
+          </button>
+        </div>
+      </form>
+    </main>
+  </section>
+</div>
