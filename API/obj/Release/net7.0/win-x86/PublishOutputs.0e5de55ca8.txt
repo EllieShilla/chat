@@ -1,0 +1,6 @@
+D:\Asp.net\chat\api\bin\Publish\appsettings.Development.json
+D:\Asp.net\chat\api\bin\Publish\appsettings.json
+D:\Asp.net\chat\api\bin\Publish\API.pdb
+D:\Asp.net\chat\api\bin\Publish\aspnetcorev2_inprocess.dll
+D:\Asp.net\chat\api\bin\Publish\Microsoft.Data.SqlClient.SNI.dll
+D:\Asp.net\chat\api\bin\Publish\API.exe

@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Asp.net\\chat\\api\\wwwroot\\3rdpartylicenses.txt",
+      "PackagePath": "staticwebassets\\3rdpartylicenses.txt"
+    },
+    {
+      "Id": "D:\\Asp.net\\chat\\api\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Asp.net\\chat\\api\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "D:\\Asp.net\\chat\\api\\wwwroot\\main.9df880cab098955d.js",
+      "PackagePath": "staticwebassets\\main.9df880cab098955d.js"
+    },
+    {
+      "Id": "D:\\Asp.net\\chat\\api\\wwwroot\\polyfills.a95b1126cd114971.js",
+      "PackagePath": "staticwebassets\\polyfills.a95b1126cd114971.js"
+    },
+    {
+      "Id": "D:\\Asp.net\\chat\\api\\wwwroot\\runtime.7ae29a296d479790.js",
+      "PackagePath": "staticwebassets\\runtime.7ae29a296d479790.js"
+    },
+    {
+      "Id": "D:\\Asp.net\\chat\\api\\wwwroot\\styles.3cb71ac843e70ce1.css",
+      "PackagePath": "staticwebassets\\styles.3cb71ac843e70ce1.css"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\win-x86\\staticwebassets\\msbuild.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\win-x86\\staticwebassets\\msbuild.build.API.props",
+      "PackagePath": "build\\API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\win-x86\\staticwebassets\\msbuild.buildMultiTargeting.API.props",
+      "PackagePath": "buildMultiTargeting\\API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\win-x86\\staticwebassets\\msbuild.buildTransitive.API.props",
+      "PackagePath": "buildTransitive\\API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

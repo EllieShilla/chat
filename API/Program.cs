@@ -3,30 +3,31 @@ using API.Data;
 using API.Interfaces;
 using API.SignalR.ChatHub;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Azure.SignalR;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddSignalR().AddAzureSignalR(options =>
+{
+    options.ConnectionString = builder.Configuration["Azure__SignalR__ConnectionString"];
+});
 
 builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(policy =>
     {
-        policy.WithOrigins("http://localhost:4200")
+        policy.WithOrigins("http://localhost:4200", "https://messagebox-b7hhc4efdugjb9c6.germanywestcentral-01.azurewebsites.net")
         .AllowAnyHeader()
         .AllowAnyMethod()
         .AllowCredentials();
     });
 });
 
-
-
-
 // Add services to the container.
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
 
 
 
@@ -47,17 +48,13 @@ builder.Services.AddScoped<IMessageRepository, MessageRepository>();
 var app = builder.Build();
 
 
-
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
 app.UseHttpsRedirection();
 app.UseAuthorization();
+
+app.UseDefaultFiles();
+app.UseStaticFiles();
+
+
 app.MapControllers();
 
 using var scope = app.Services.CreateScope();
@@ -74,14 +71,10 @@ catch (Exception ex)
     logger.LogError(ex, "An error occurred during migration");
 }
 
-app.UseCors();
-app.UseDefaultFiles();
+app.UseCors("CorsPolicy");
 app.UseRouting();
-app.UseStaticFiles();
 
-app.MapHub<GroupHub>("/group");
 app.MapHub<MessageHub>("/chat");
-
-
+app.MapFallbackToController("Index", "Fallback");
 
 app.Run();

@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HubConnection, HubConnectionBuilder } from '@microsoft/signalr';
 import { BehaviorSubject, map } from 'rxjs';
 import { Message } from 'src/app/_models/message';
-import { ForConnection } from 'src/app/_models/forConnection';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -25,7 +24,7 @@ export class ChatService {
   messageThread$ = this.messageThreadSource.asObservable();
 
   constructor() {
-    this.hubConnection = new HubConnectionBuilder()
+      this.hubConnection = new HubConnectionBuilder()
       .withUrl(this.hubUrl + 'chat')
       .withAutomaticReconnect()
       .build();
@@ -66,7 +65,6 @@ export class ChatService {
   }
 
   stopHubConnection() {
-    if (this.hubConnection)
-    this.hubConnection.stop();
+    if (this.hubConnection) this.hubConnection.stop();
   }
 }

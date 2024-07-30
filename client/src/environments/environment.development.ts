@@ -1,4 +1,5 @@
 export const environment = {
-  hubUrl: 'http://localhost:5219/',
-  apiUrl: 'http://localhost:5219/api/',
+  production: false,
+  hubUrl: 'https://messagebox-b7hhc4efdugjb9c6.germanywestcentral-01.azurewebsites.net/',
+  apiUrl: 'https://messagebox-b7hhc4efdugjb9c6.germanywestcentral-01.azurewebsites.net/api/',
 };
